@@ -7,7 +7,7 @@ export function ProfileCard() {
   return (
     <div className="rounded-3xl h-full">
       <p className="text-gray-600 mb-8">
-      Hello! I'm David, a dedicated creative professional with expertise in Branding Design, Graphic Design, Animation, and Video Editing. With a strong focus on helping brands stand out, my team and I bring a unique combination of skills to create visually compelling and strategic solutions.
+      {`Hello! I'm David, a dedicated creative professional with expertise in Branding Design, Graphic Design, Animation, and Video Editing. With a strong focus on helping brands stand out, my team and I bring a unique combination of skills to create visually compelling and strategic solutions.`}
       </p>
       <div className="relative">
         

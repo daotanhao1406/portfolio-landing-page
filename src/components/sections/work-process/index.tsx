@@ -1,7 +1,5 @@
 import React from 'react';
-import ProcessCard from './process-card';
-import { ArrowLeft, ArrowRight, Glasses, GlassesIcon } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Glasses, GlassesIcon } from 'lucide-react';
 const processData = [
     {
       icon: GlassesIcon,
@@ -67,7 +65,7 @@ export default function WorkProcessSection() {
        <span className="text-[#613AF7] font-semibold">WORK PROCESS</span>
      </div>
      <h2 className="text-3xl font-bold mb-8 max-w-lg">
-        Here's a streamlined work process for your projects:
+        {`Here's a streamlined work process for your projects:`}
       </h2>
         </div>
         <div className="grid gap-8 md:grid-cols-3">

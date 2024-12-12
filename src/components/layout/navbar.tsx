@@ -31,7 +31,7 @@ export function Navbar() {
           {/* Right side */}
           <div className="flex-1 flex justify-end items-center gap-4">
             <Button className="bg-primary text-white hidden lg:flex" >
-              Let's Talk
+            {`Let's Talk`}
             </Button>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -68,7 +68,7 @@ export function Navbar() {
                 </Link>
               ))}
               <button className="mt-4 px-4 py-2 bg-primary text-white rounded-lg">
-                Let's Talk
+              {`Let's Talk`}
               </button>
             </div>
           </div>

@@ -12,7 +12,7 @@ export function HeroSection() {
             <span className="text-primary">Design</span> Solutions.
           </h1>
           <p className="text-gray-600 mb-8 text-sm md:text-medium">
-          Investing in your brand is the key to unlocking growth, and I'm here to guide you every step of the way. With strategic design and proven expertise, we’ll turn your vision into a powerful brand experience that drives engagement and sales. Relax, and let me handle the details, giving you a complete solution for impactful growth.
+          {`Investing in your brand is the key to unlocking growth, and I'm here to guide you every step of the way. With strategic design and proven expertise, we’ll turn your vision into a powerful brand experience that drives engagement and sales. Relax, and let me handle the details, giving you a complete solution for impactful growth.`}
           </p>
           <div className="flex gap-4 justify-center">
             <Button className="bg-primary text-white">Contact</Button>

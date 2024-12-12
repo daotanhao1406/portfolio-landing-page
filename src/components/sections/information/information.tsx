@@ -1,4 +1,3 @@
-import { Button } from "../../ui/button";
 import ColumnCard from "./column-card";
 import RowCard from "./row-card";
 
@@ -20,9 +19,9 @@ export function InformationSection() {
 
           <div className="w-full h-auto flex  p-8 bg-[#F1DEBB] rounded-lg">
             <div className="text-center flex flex-col justify-center items-center space-y-8">
-            <h2 className="text-2xl md:text-4xl font-bold">We're more than <br /> Designers</h2>
+            <h2 className="text-2xl md:text-4xl font-bold">{`We're more than`} <br /> Designers</h2>
             <p className="font-semibold text-xs md:text-sm">
-            We’re your partners in creating memorable brand experiences. Trust us to deliver quality, innovation, and results every step of the way.
+            {`We’re your partners in creating memorable brand experiences. Trust us to deliver quality, innovation, and results every step of the way.`}
           </p>
           <div className="flex items-center gap-6">
             <div className="w-10 h-10 rounded-3xl bg-slate-600"></div>

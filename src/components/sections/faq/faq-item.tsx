@@ -23,7 +23,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question }) => {
       </button>
       {isOpen && (
         <div className="mt-2 text-sm text-gray-600">
-          You can pay with a credit card or via bank transfer. If you choose the annual billing option, you'll get 2 months free and your subscription automatically at the end of every billing cycle.
+          {`You can pay with a credit card or via bank transfer. If you choose the annual billing option, you'll get 2 months free and your subscription automatically at the end of every billing`} cycle.
         </div>
       )}
     </div>
