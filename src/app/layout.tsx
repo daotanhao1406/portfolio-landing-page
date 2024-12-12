@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
+const geistPolySans = localFont({
   src: "./fonts/PolySans.ttf",
   variable: "--font-poly-sans",
   weight: "100 900",
 });
-const geistMono = localFont({
+const geistAeonik = localFont({
   src: "./fonts/Aeonik/Aeonik-Bold.otf",
   variable: "--font-aeonik-bold",
   weight: "100 900",
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistPolySans.variable} ${geistAeonik.variable} antialiased`}
       >
         {children}
       </body>

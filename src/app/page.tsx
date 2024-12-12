@@ -1,35 +1,31 @@
-import Image from "next/image";
+import { Navbar } from "@/components/layout/navbar";
+import { Footer } from "@/components/layout/footer";
+import { HeroSection } from "@/components/sections/hero";
+import { TrustedBySection } from "@/components/sections/trusted-by";
+import { ServicesSection } from "@/components/sections/services";
+import { BrandingSection } from "@/components/sections/branding";
+import { WorksPortfolioSection } from "@/components/sections/works-portfolio";
+import { InformationSection } from "@/components/sections/information/information";
+import FAQSection from "@/components/sections/faq";
+import WorkProcessSection from "@/components/sections/work-process";
+import SocialMediaSection from "@/components/sections/social-media";
+import DemoSection from "@/components/sections/demo";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-aeonik-bold)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <ol className="list-inside text-sm text-center sm:text-left font-[family-name:var(--font-poly-sans)]">
-          <li className="mb-2">
-            Hi Fahim Gazi
-          </li>
-          <li>Looking forward to working together!</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Get Started to Work
-          </a>
-        </div>
-      </main>
-      
-    </div>
+    <main className="min-h-screen bg-[#FFFAF5]">
+      <Navbar />
+      <HeroSection />
+      <TrustedBySection />
+        <DemoSection />
+        <ServicesSection />
+      <BrandingSection />
+      <WorksPortfolioSection />
+      <InformationSection />
+      <WorkProcessSection />
+      <FAQSection />
+      <SocialMediaSection />
+      <Footer />
+    </main>
   );
 }
