@@ -12,9 +12,9 @@ export function ServicesSection() {
         {/* Desktop Layout */}
         <div className="hidden lg:inline-flex items-center gap-2">
         <div className="w-6 h-6 bg-orange-500/10 rounded flex items-center justify-center">
-          <span className="text-orange-500">★</span>
+          <span className="text-orange-500 text-2xl">★</span>
         </div>
-        <span className="text-[#7553f5] text-xl font-semibold">SERVICES</span>
+        <span className="text-[#7553f5] text-2xl font-medium font-polysans">SERVICES</span>
       </div>
         <div className="hidden lg:grid grid-cols-2 gap-16 mt-3">
           <div className="flex flex-col justify-between">

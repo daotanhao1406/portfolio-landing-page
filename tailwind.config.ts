@@ -14,6 +14,10 @@ const config: Config = {
         primary: '#613af7',
         secondary: '#ff7b32'
       },
+      fontFamily: {
+        aeonik: ['Aeonik', 'sans-serif'],
+        polysans: ['PolySans', 'sans-serif'],
+      }
     },
   },
   plugins: [],

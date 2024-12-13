@@ -1,13 +1,13 @@
 import Image from "next/image";
 
 export function TrustedBySection() {
+  const logoSrc = ['/chargewald-logo.png', '/nature-food-logo.png', '/sensory-home-logo.png', '/sensory-marketing-logo.png', '/softnode-logo.png', '/sonar-leads-logo.png', '/trendrix-logo.png', '/allied-logo.png']
   return (
-    <div className="py-12 bg-white">
-      <div className="flex justify-center opacity-60">
-        <Image src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=128&h=48&q=80" alt="Client 1" width={128} height={48} className="h-8 object-contain" />
-        <Image src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=128&h=48&q=80" alt="Client 2" width={128} height={48} className="h-8 object-contain" />
-        <Image src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=128&h=48&q=80" alt="Client 3" width={128} height={48} className="h-8 object-contain" />
-        <Image src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=128&h=48&q=80" alt="Client 4" width={128} height={48} className="h-8 object-contain" />
+    <div className="py-8 bg-white">
+      <div className="flex justify-center opacity-60 overflow-hidden gap-8">
+        {logoSrc.map((item, index) => {
+          return <Image key={index} src={item} alt="Client 1" width={200} height={48} className="h-8 object-contain" />
+        })}
       </div>
     </div>
   );

@@ -5,16 +5,16 @@ export function InformationSection() {
   return (
     <section className="py-20 text-center bg-[#613AF7] ">
       <div className="mx-auto ">
-        <div className="text-center max-w-2xl mx-auto space-y-4">
+        <div className="text-center mx-auto space-y-6">
       <div className="inline-flex items-center gap-2 px-3 py-1 bg-white rounded-full">
-          <span className="text-orange-500 text-sm">★</span>
-        <span className="text-[#613AF7] font-semibold">INFORMATIONS</span>
+          <span className="text-orange-500 text-2xl">★</span>
+        <span className="text-[#613AF7] text-2xl font-medium font-polysans">INFORMATIONS</span>
       </div>
-      <h2 className="text-2xl md:text-4xl font-bold text-white">Committed to Grow Your Business</h2>
-      <p className="text-white mb-8">
+      <h2 className="text-2xl md:text-5xl font-bold text-white ">Committed to Grow Your Business</h2>
+      <p className="text-white mb-8 max-w-3xl mx-auto text-xl font-light">
       Choosing me means choosing a team that’s invested in your success. Together, we’ll create visuals that not only look great but drive meaningful results for your brand.          </p>
       </div>
-     <div className="w-full mx-auto max-w-7xl px-4 space-y-4 mt-7">
+     <div className="w-full mx-auto max-w-7xl px-4 space-y-4 mt-12">
      <div className="text-center w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
 
           <div className="w-full h-auto flex  p-8 bg-[#F1DEBB] rounded-lg">

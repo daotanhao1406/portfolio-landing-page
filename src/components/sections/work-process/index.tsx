@@ -4,19 +4,19 @@ const processData = [
     {
       icon: GlassesIcon,
       title: "Discovery & Consultation",
-      description: "We begin with a comprehensive discussion of your vision, goals, and project requirements.",
+      description: "We begin with a conversation to understand your vision, goals, and project requirements. This step allows us to align our approach with your brand’s unique needs.",
       bgColor: "bg-[#C5B7FC]"
     },
     {
       icon: GlassesIcon,
       title: "Concept Development",
-      description: "Based on our discussions, we develop initial concepts and create preliminary designs.",
+      description: "Based on our discussions, we brainstorm and create initial concepts. This stage focuses on visualizing ideas and presenting creative directions for your feedback.",
       bgColor: "bg-[#FFE897]"
     },
     {
       icon: GlassesIcon,
       title: "Design & Creation",
-      description: "Once the concept is approved, we begin the detailed design and development phase.",
+      description: "After finalizing a concept, we dive into the design phase, applying our expertise in branding, graphic design, animation, or video editing to bring your vision to life.",
       bgColor: "bg-[#FFE1B6]"
     }
   ];
@@ -61,8 +61,8 @@ export default function WorkProcessSection() {
           className="text-left mb-12"
         >
              <div className="inline-flex items-center gap-2">
-         <span className="text-orange-500 text-sm">★</span>
-       <span className="text-[#613AF7] font-semibold">WORK PROCESS</span>
+         <span className="text-orange-500 text-2xl">★</span>
+       <span className="text-[#613AF7] text-2xl font-medium font-polysans">WORK PROCESS</span>
      </div>
      <h2 className="text-3xl font-bold mb-8 max-w-lg">
         {`Here's a streamlined work process for your projects:`}
