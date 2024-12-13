@@ -2,9 +2,10 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { Play, Video } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { MenuItem } from "@/constants/navigation";
+import { usePathname } from "next/navigation";
 
 interface NavMenuProps {
   items: MenuItem[];
@@ -13,7 +14,7 @@ interface NavMenuProps {
 export function NavMenu({ items }: NavMenuProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
+  const pathname = usePathname()
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -38,14 +39,15 @@ export function NavMenu({ items }: NavMenuProps) {
               <>
                 <button
                   onClick={() => toggleDropdown(item.title)}
-                  className="flex items-center gap-1 text-primary hover:text-primary py-2"
+                  className={`flex items-center gap-1 ${pathname === item.path && "text-primary"} py-2`}
                 >
                   {item.title}
-                  <ChevronDown
-                    size={20}
+                  <Play
+                    size={15}
+                    color={'#000'}
                     className={cn(
-                      "transform transition-transform duration-200",
-                      activeDropdown === item.title ? "rotate-180" : ""
+                      "transform transition-transform duration-200 ml-1",
+                      activeDropdown === item.title ? "-rotate-90 fill-black" : "fill-black rotate-90"
                     )}
                   />
                 </button>
@@ -58,9 +60,12 @@ export function NavMenu({ items }: NavMenuProps) {
                         <li key={subItem.title}>
                           <Link
                             href={subItem.path}
-                            className="block px-4 py-2 text-primary hover:text-primary hover:bg-purple-50 rounded-md transition-colors"
+                            className={`flex items-center py-2 ${pathname === item.path && "text-primary"} hover:bg-purple-50 rounded-md transition-colors`}
                           >
-                            {subItem.title}
+                            <div className="w-8 h-8 mr-2 flex items-center justify-center bg-white rounded-full">
+                            <Video size={20}/> 
+                          </div>  
+                           {subItem.title}
                           </Link>
                         </li>
                       ))}
@@ -71,7 +76,7 @@ export function NavMenu({ items }: NavMenuProps) {
             ) : (
               <Link
                 href={item.path}
-                className="block text-primary hover:text-primary py-2"
+                className={`block py-2 ${pathname === item.path && "text-primary"}`}
               >
                 {item.title}
               </Link>

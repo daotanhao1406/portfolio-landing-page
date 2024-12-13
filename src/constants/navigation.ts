@@ -1,9 +1,10 @@
-import { MessageCircle, Linkedin, Mail, Github, Twitter, Facebook, Instagram } from "lucide-react";
+import { MessageCircle, Linkedin, Mail, Github, Twitter, Facebook, Instagram, Video } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 export interface MenuItem {
   title: string;
   path: string;
+  icon?: LucideIcon
   submenu?: MenuItem[];
 }
 
@@ -17,13 +18,18 @@ export const menuItems: MenuItem[] = [
     title: "Service",
     path: "#",
     submenu: [
-      { title: "Branding Design", path: "/services/branding" },
-      { title: "Graphic Design", path: "/services/graphic" },
-      { title: "Video Editing", path: "/services/video" },
-      { title: "Animation & Motion Graphic", path: "/services/animation" },
+      { title: "Branding Design", path: "/services/branding", icon: Video },
+      { title: "Graphic Design", path: "/services/graphic", icon: Video },
+      { title: "Video Editing", path: "/services/video", icon: Video },
+      { title: "Animation & Motion Graphic", path: "/services/animation", icon: Video },
     ],
   },
-  { title: "Works", path: "/works" },
+  { title: "Works", path: "/works", submenu: [
+    { title: "Branding Design", path: "/services/branding", icon: Video },
+    { title: "Graphic Design", path: "/services/graphic", icon: Video },
+    { title: "Video Editing", path: "/services/video", icon: Video },
+    { title: "Animation & Motion Graphic", path: "/services/animation", icon: Video },
+  ], },
   { title: "About", path: "/about" },
   { title: "Blog", path: "/blog" },
   { title: "FAQ", path: "/faq" },

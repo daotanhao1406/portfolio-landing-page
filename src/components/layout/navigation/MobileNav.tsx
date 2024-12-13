@@ -6,6 +6,7 @@ import { MenuButton } from "./MenuButton";
 import { NavMenu } from "./NavMenu";
 import { SocialLinks } from "./SocialLinks";
 import { MenuItem } from "@/constants/navigation";
+import { ArrowUpRight } from "lucide-react";
 
 interface MobileNavProps {
   items: MenuItem[];
@@ -28,7 +29,7 @@ export function MobileNav({ items, isOpen, onClose, onToggle }: MobileNavProps) 
       <div
         ref={navRef}
         className={cn(
-          "fixed inset-y-0 bg-[#F1DEBB] transform transition-transform duration-300 ease-in-out z-50",
+          "fixed inset-y-0 bg-[#F1DEBB] transform transition-transform duration-300 ease-in-out z-50 px-2",
           "w-full md:w-1/2",
           "right-0",
           isOpen ? "translate-x-0" : "translate-x-full"
@@ -53,8 +54,8 @@ export function MobileNav({ items, isOpen, onClose, onToggle }: MobileNavProps) 
           </div>
 
           <div className="px-4 py-6 bg-[#F1DEBB] space-y-4 mb-4">
-            <button className="w-full bg-primary hover:bg-primary text-white rounded-full py-3 mb-6 transition-colors">
-              Let&apos;s Talk →
+            <button className="w-full bg-primary hover:bg-primary text-white rounded-full py-3 mb-6 transition-colors flex items-center justify-center">
+              Let&apos;s Talk <ArrowUpRight className="w-6 h-6 ml-2 text-white group-hover:text-white transition-colors" />
             </button>
             <SocialLinks />
           </div>

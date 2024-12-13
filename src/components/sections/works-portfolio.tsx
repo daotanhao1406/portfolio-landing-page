@@ -22,7 +22,7 @@ export function WorksPortfolioSection() {
         Video Works Animation Line
       </div>
       </div>
-      <Button className="text-white font-light text-xl p-6">View All Work  <ArrowUpRight className="w-5 h-5 ml-1 text-white group-hover:text-white transition-colors" /></Button>
+      <Button className="text-white font-normal text-xl p-6">View All Work  <ArrowUpRight className="w-5 h-5 ml-1 text-white group-hover:text-white transition-colors" /></Button>
       </div>
     </section>
   );

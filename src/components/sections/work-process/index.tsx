@@ -1,20 +1,20 @@
 import React from 'react';
-import { Glasses, GlassesIcon } from 'lucide-react';
+import { Blocks, PencilRuler, Search } from 'lucide-react';
 const processData = [
     {
-      icon: GlassesIcon,
+      icon: <Search size={40}/>,
       title: "Discovery & Consultation",
       description: "We begin with a conversation to understand your vision, goals, and project requirements. This step allows us to align our approach with your brand’s unique needs.",
       bgColor: "bg-[#C5B7FC]"
     },
     {
-      icon: GlassesIcon,
+      icon: <Blocks size={40}/>,
       title: "Concept Development",
       description: "Based on our discussions, we brainstorm and create initial concepts. This stage focuses on visualizing ideas and presenting creative directions for your feedback.",
       bgColor: "bg-[#FFE897]"
     },
     {
-      icon: GlassesIcon,
+      icon: <PencilRuler size={40}/>,
       title: "Design & Creation",
       description: "After finalizing a concept, we dive into the design phase, applying our expertise in branding, graphic design, animation, or video editing to bring your vision to life.",
       bgColor: "bg-[#FFE1B6]"
@@ -58,24 +58,24 @@ export default function WorkProcessSection() {
     <section className="max-w-7xl mx-4 py-16 md:py-24 lg:mx-auto">
       <div className="md:px-4">
         <div
-          className="text-left mb-12"
+          className="text-left mb-12 space-y-4"
         >
              <div className="inline-flex items-center gap-2">
          <span className="text-orange-500 text-2xl">★</span>
        <span className="text-[#613AF7] text-2xl font-medium font-polysans">WORK PROCESS</span>
      </div>
-     <h2 className="text-3xl font-bold mb-8 max-w-lg">
+     <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-8 max-w-4xl">
         {`Here's a streamlined work process for your projects:`}
       </h2>
         </div>
         <div className="grid gap-8 md:grid-cols-3">
         {processData.map((process, index) => (
             <div key={index} className={`flex flex-col ${process.bgColor} p-6 rounded-lg border`}>
-              <div className="mb-4"><Glasses size={40}/></div>
+              <div className="mb-4 ">{process.icon}</div>
               {/* <p className="flex-1 text-base mb-4">{process.icon}</p> */}
               <div>
-                <p className="font-semibold">{process.title}</p>
-                <p className="text-sm text-muted-foreground">{process.description}</p>
+                <p className="font-semibold lg:text-2xl mb-3">{process.title}</p>
+                <p className="text-sm text-muted-foreground lg:text-base">{process.description}</p>
               </div>
             </div>
           ))}
