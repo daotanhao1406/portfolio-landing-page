@@ -28,7 +28,7 @@ export function MobileNav({ items, isOpen, onClose, onToggle }: MobileNavProps) 
       <div
         ref={navRef}
         className={cn(
-          "fixed inset-y-0 bg-[#F1DEBB] transform transition-transform duration-300 ease-in-out",
+          "fixed inset-y-0 bg-[#F1DEBB] transform transition-transform duration-300 ease-in-out z-50",
           "w-full md:w-1/2",
           "right-0",
           isOpen ? "translate-x-0" : "translate-x-full"
