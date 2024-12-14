@@ -20,7 +20,7 @@ export function InformationSection() {
      <div className="w-full mx-auto max-w-7xl px-4 space-y-4 mt-12">
      <div className="text-center w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-          <div className="w-full h-auto flex p-12 bg-[#F1DEBB] rounded-lg">
+          <div style={{ backgroundImage: "url('/information-bg.svg')", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center top" }} className="w-full h-auto flex p-12 bg-[#F1DEBB] rounded-lg">
             <div className="text-center flex flex-col justify-center items-center space-y-8 mx-auto">
             <h2 className="text-2xl md:text-4xl font-bold">{`We're more than`} <br /> Designers</h2>
             <p className="font-medium text-xs max-w-sm md:text-sm">
@@ -37,19 +37,19 @@ export function InformationSection() {
         </div>
 
         <div className="text-center w-full grid grid-cols-2 sm:grid-cols-2 gap-4 ">
-          <div className="bg-[#F1DEBB] p-4 sm:flex flex-col justify-center rounded-lg h-full space-y-2">
+          <div style={{ backgroundImage: "url('/information-bg.svg')", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center top" }} className="bg-[#F1DEBB] p-4 sm:flex flex-col justify-center rounded-lg h-full space-y-2">
             <h3 className="text-[#FF7B32] text-4xl md:text-5xl lg:text-6xl font-bold">4+</h3>
             <p className='lg:text-lg md:font-medium text-sm'>Years of Experience</p>
           </div>
-          <div className="bg-[#F1DEBB] p-4 sm:flex flex-col justify-center rounded-lg h-full space-y-2">
+          <div style={{ backgroundImage: "url('/information-bg.svg')", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center top" }} className="bg-[#F1DEBB] p-4 sm:flex flex-col justify-center rounded-lg h-full space-y-2">
             <h3 className="text-[#FF7B32] text-4xl md:text-5xl lg:text-6xl font-bold">250+</h3>
             <p className='lg:text-lg md:font-medium text-sm'>Project Crafted</p>
           </div>
-          <div className="bg-[#F1DEBB] p-4 sm:flex flex-col justify-center rounded-lg h-full space-y-2">
+          <div style={{ backgroundImage: "url('/information-bg.svg')", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center top" }} className="bg-[#F1DEBB] p-4 sm:flex flex-col justify-center rounded-lg h-full space-y-2">
             <h3 className="text-[#FF7B32] text-4xl md:text-5xl lg:text-6xl font-bold">17</h3>
             <p className='lg:text-lg md:font-medium text-sm'>Countries Served</p>
           </div>
-          <div className="bg-[#F1DEBB] p-4 sm:flex flex-col justify-center rounded-lg h-full space-y-2">
+          <div style={{ backgroundImage: "url('/information-bg.svg')", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center top" }} className="bg-[#F1DEBB] p-4 sm:flex flex-col justify-center rounded-lg h-full space-y-2">
             <h3 className="text-[#FF7B32] text-4xl md:text-5xl lg:text-6xl font-bold">8</h3>
             <p className='lg:text-lg md:font-medium text-sm'>Team Members</p>
           </div>

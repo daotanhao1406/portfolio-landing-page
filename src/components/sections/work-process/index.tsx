@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 const processData = [
     {
       icon: '/magnify-icon.svg',
@@ -12,6 +13,18 @@ const processData = [
       title: "Concept Development",
       description: "Based on our discussions, we brainstorm and create initial concepts. This stage focuses on visualizing ideas and presenting creative directions for your feedback.",
       bgColor: "bg-[#FFE897]"
+    },
+    {
+      icon: '/antd-icon.svg',
+      title: "Design & Creation",
+      description: "After finalizing a concept, we dive into the design phase, applying our expertise in branding, graphic design, animation, or video editing to bring your vision to life.",
+      bgColor: "bg-[#FFE1B6]"
+    },
+    {
+      icon: '/antd-icon.svg',
+      title: "Design & Creation",
+      description: "After finalizing a concept, we dive into the design phase, applying our expertise in branding, graphic design, animation, or video editing to bring your vision to life.",
+      bgColor: "bg-[#FFE1B6]"
     },
     {
       icon: '/antd-icon.svg',
@@ -56,6 +69,12 @@ export default function WorkProcessSection() {
     //     </div>
     // </section>
     <section className="max-w-7xl mx-4 py-16 md:py-24 lg:mx-auto">
+      <Carousel
+      opts={{
+        align: "start",
+      }}
+      className="w-full"
+    >
       <div className="md:px-4">
         <div
           className="text-left mb-12 space-y-4"
@@ -66,12 +85,41 @@ export default function WorkProcessSection() {
          </span>
        <span className="text-[#613AF7] text-2xl font-medium font-polysans">WORK PROCESS</span>
      </div>
+     <div className='flex justify-between'>
      <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-8 max-w-4xl">
         {`Here's a streamlined work process for your projects:`}
       </h2>
+      <CarouselPrevious />
+      <CarouselNext />
+      </div>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
+        {/* <div className="grid gap-8 md:grid-cols-3">
         {processData.map((process, index) => (
+            <div key={index} className={`flex flex-col ${process.bgColor} p-6 rounded-lg border`}>
+              <Image alt={process.icon} width={48} height={48} className='mb-6' src={process.icon} />
+              <div>
+                <p className="font-semibold lg:text-2xl mb-3">{process.title}</p>
+                <p className="text-sm text-muted-foreground lg:text-base">{process.description}</p>
+              </div>
+            </div>
+          ))}
+        </div> */}
+
+
+
+
+        
+      <CarouselContent>
+        {/* {Array.from({ length: 5 }).map((_, index) => (
+          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+            <div className="p-1">
+               
+            </div>
+          </CarouselItem>
+        ))} */}
+
+{processData.map((process, index) => (
+  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
             <div key={index} className={`flex flex-col ${process.bgColor} p-6 rounded-lg border`}>
               <Image alt={process.icon} width={48} height={48} className='mb-6' src={process.icon} />
               {/* <p className="flex-1 text-base mb-4">{process.icon}</p> */}
@@ -80,9 +128,12 @@ export default function WorkProcessSection() {
                 <p className="text-sm text-muted-foreground lg:text-base">{process.description}</p>
               </div>
             </div>
+            </CarouselItem>
           ))}
-        </div>
+      </CarouselContent>
+      
       </div>
+    </Carousel>
     </section>
   );
 

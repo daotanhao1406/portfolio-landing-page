@@ -17,11 +17,11 @@ export default function NavBar() {
   useClickOutside(navRef, () => setIsOpen(false), isOpen);
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "#", label: "Services" },
+    { href: "/services", label: "Services" },
     { href: "/works", label: "Works" },
-    { href: "#", label: "About" },
-    { href: "#", label: "Blog" },
-    { href: "#", label: "FAQ" },
+    { href: "/about", label: "About" },
+    { href: "/blog", label: "Blog" },
+    { href: "/faq", label: "FAQ" },
   ];
   return (
     <nav ref={navRef} className="w-full top-0 z-50">

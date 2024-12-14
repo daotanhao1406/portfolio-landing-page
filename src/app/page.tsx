@@ -5,15 +5,15 @@ import { BrandingSection } from "@/components/sections/branding";
 import { WorksPortfolioSection } from "@/components/sections/works-portfolio";
 import { InformationSection } from "@/components/sections/information/information";
 import FAQSection from "@/components/sections/faq";
-import WorkProcessSection from "@/components/sections/work-process";
 import DemoSection from "@/components/sections/demo";
 import NavBar from "@/components/layout/navigation/NavBar";
+import NewWorkProcessSection from "@/components/sections/work-process/new-process";
 
 export default function Home() {
   return (
         
     <section >
-      <div style={{ backgroundImage: "url('/hero-bg.svg')", backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center top" }}>
+      <div className="xl:bg-cover bg-contain" style={{ backgroundImage: "url('/hero-bg.svg')", backgroundRepeat: "no-repeat", backgroundPosition: "center top" }}>
         <NavBar />
         <HeroSection />
       </div>
@@ -24,7 +24,8 @@ export default function Home() {
       <WorksPortfolioSection />
       <InformationSection />
       <div style={{ backgroundImage: "url('/pattern-bg.svg')", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center top" }}>
-        <WorkProcessSection />
+        {/* <WorkProcessSection /> */}
+        <NewWorkProcessSection />
         <FAQSection />
       </div>
     </section>

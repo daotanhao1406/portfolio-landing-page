@@ -2,10 +2,8 @@
 import { ProjectCard } from "./project-card";
 import Image from "next/image";
 import NavBar from "@/components/layout/navigation/NavBar";
-import { useState } from "react";
 import { Popover } from "antd";
 import { ArrowUpRight } from "lucide-react";
-import { cn } from "@/lib/utils";
 import './index.css'
 const navigationData = [
     {
@@ -32,8 +30,6 @@ const navigationData = [
 
 
 export default function Works() {
-  const [openIndex, setOpenIndex] = useState<number>(0);
-
     return (
       <section>
         <NavBar />
@@ -85,17 +81,19 @@ export default function Works() {
                         ))}
                     </div>
                     </>}
-                    trigger="click"
+                    trigger="hover"
                     placement="bottom"
                   >
                       <button
-                      onClick={() => setOpenIndex(item.key)}
-                        className={cn(
-                          "px-6 py-2 rounded-full md:text-base text-sm font-medium",
-                          openIndex === item.key 
-                            ? "bg-white text-primary border-2 border-[#F1DEBB]" 
-                            : "bg-[#F4F4F4] text-[#312D42]"
-                        )}
+                      // onClick={() => setOpenIndex(item.key)}
+                        // className={cn(
+                        //   "px-6 py-2 rounded-full md:text-base text-sm font-medium",
+                        //   openIndex === item.key 
+                        //     ? "bg-white text-primary border-2 border-[#F1DEBB]" 
+                        //     : "bg-[#F4F4F4] text-[#312D42]"
+                        // )}
+
+                        className="px-6 py-2 border-[#F4F4F4] rounded-full md:text-base text-sm font-medium bg-[#F4F4F4] text-[#312D42] hover:bg-white hover:text-primary border-2 hover:border-[#F1DEBB]"
                       >
                         {item.label}
                       </button>
@@ -108,12 +106,12 @@ export default function Works() {
 
             <div className="w-full mx-auto py-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl xl:mx-auto">
-                    <ProjectCard title="Project Name" isHighlighted={true} />
-                    <ProjectCard />
-                    <ProjectCard />
-                    <ProjectCard />
-                    <ProjectCard />
-                    <ProjectCard />
+                    <ProjectCard title="Project Name" />
+                    <ProjectCard title="Project Name"/>
+                    <ProjectCard title="Project Name"/>
+                    <ProjectCard title="Project Name"/>
+                    <ProjectCard title="Project Name"/>
+                    <ProjectCard title="Project Name"/>
                 </div>
             </div>
 
