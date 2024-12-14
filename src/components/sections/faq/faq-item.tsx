@@ -15,7 +15,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="text-sm font-medium">{question}</span>
-        <span className={`transform transition-transform ${isOpen ? 'rotate-180' : ''}`}>
+        <span className={`p-2 bg-[#F1DEBB] transform transition-transform ${isOpen ? 'rotate-180' : ''}`}>
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path d="M6 9L12 3H0L6 9Z" fill="currentColor" />
           </svg>

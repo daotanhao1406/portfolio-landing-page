@@ -19,7 +19,9 @@ export function ProfileCard() {
           className="w-full h-[300px] md:h-[420px] object-cover object-top rounded-3xl"
         />
         <div className="absolute bottom-6 left-[100px] -translate-x-1/2 z-10">
-          <Button className="bg-green-500 text-white">Chat on WhatsApp</Button>
+          <Button className="bg-green-500 text-white pl-2">
+            <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight:8}} width={28} height={28} src={'/whats-app-outline.svg'} alt={'whatsapp'}/>
+            Chat on WhatsApp</Button>
         </div>
         <div className="absolute inset-0 bg-gradient-to-t rounded-3xl from-purple-300/50 to-transparent" />
       </div>

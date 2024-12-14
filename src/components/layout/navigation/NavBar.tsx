@@ -25,7 +25,7 @@ export default function NavBar() {
   ];
   return (
     <nav ref={navRef} className="w-full top-0 z-50">
-      <div className="px-4 py-6 bg-[#FFFAF5]">
+      <div className="px-4 py-6">
         <div className="max-w-7xl mx-auto relative">
           <div className="flex justify-between items-center">
           <div className="flex-1" />
@@ -34,7 +34,7 @@ export default function NavBar() {
             {navLinks.map((link) => (
               <Link
                 key={link.href}
-                href="#"
+                href={link.href}
                 className={`${ pathname === link.href
                   && "border-b-2 border-white text-primary"
                   } text-base hover:text-gray-900 transition-colors`}

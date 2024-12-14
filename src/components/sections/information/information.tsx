@@ -1,5 +1,6 @@
 import ColumnCard from "./column-card";
 import RowCard from "./row-card";
+import Image from "next/image";
 
 export function InformationSection() {
   return (
@@ -7,7 +8,9 @@ export function InformationSection() {
       <div className="mx-auto ">
         <div className="text-center mx-auto space-y-6">
       <div className="inline-flex items-center gap-2 px-3 py-1 bg-white rounded-full">
-          <span className="text-orange-500 text-2xl">★</span>
+          <span className="text-orange-500 text-2xl">
+            <Image alt="information" width={28} height={28} src={'/information-icon.svg'} className="mr-2" />
+          </span>
         <span className="text-[#613AF7] text-2xl font-medium font-polysans">INFORMATIONS</span>
       </div>
       <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white ">Committed to Grow Your Business</h2>

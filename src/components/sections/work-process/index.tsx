@@ -1,20 +1,20 @@
 import React from 'react';
-import { Blocks, PencilRuler, Search } from 'lucide-react';
+import Image from 'next/image';
 const processData = [
     {
-      icon: <Search size={40}/>,
+      icon: '/magnify-icon.svg',
       title: "Discovery & Consultation",
       description: "We begin with a conversation to understand your vision, goals, and project requirements. This step allows us to align our approach with your brand’s unique needs.",
       bgColor: "bg-[#C5B7FC]"
     },
     {
-      icon: <Blocks size={40}/>,
+      icon: '/carbon-icon.svg',
       title: "Concept Development",
       description: "Based on our discussions, we brainstorm and create initial concepts. This stage focuses on visualizing ideas and presenting creative directions for your feedback.",
       bgColor: "bg-[#FFE897]"
     },
     {
-      icon: <PencilRuler size={40}/>,
+      icon: '/antd-icon.svg',
       title: "Design & Creation",
       description: "After finalizing a concept, we dive into the design phase, applying our expertise in branding, graphic design, animation, or video editing to bring your vision to life.",
       bgColor: "bg-[#FFE1B6]"
@@ -61,7 +61,9 @@ export default function WorkProcessSection() {
           className="text-left mb-12 space-y-4"
         >
              <div className="inline-flex items-center gap-2">
-         <span className="text-orange-500 text-2xl">★</span>
+         <span className="text-orange-500 text-2xl">
+          <Image alt="process" width={20} height={20} src={'/process-icon.svg'} className="mr-1" />
+         </span>
        <span className="text-[#613AF7] text-2xl font-medium font-polysans">WORK PROCESS</span>
      </div>
      <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-8 max-w-4xl">
@@ -71,7 +73,7 @@ export default function WorkProcessSection() {
         <div className="grid gap-8 md:grid-cols-3">
         {processData.map((process, index) => (
             <div key={index} className={`flex flex-col ${process.bgColor} p-6 rounded-lg border`}>
-              <div className="mb-4 ">{process.icon}</div>
+              <Image alt={process.icon} width={48} height={48} className='mb-6' src={process.icon} />
               {/* <p className="flex-1 text-base mb-4">{process.icon}</p> */}
               <div>
                 <p className="font-semibold lg:text-2xl mb-3">{process.title}</p>

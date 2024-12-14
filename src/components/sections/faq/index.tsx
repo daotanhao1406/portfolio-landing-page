@@ -77,7 +77,7 @@ const FAQSection = () => {
     //   </div>
     //   </div>
     // </section>
-    <section className="max-w-7xl mx-4 px-4 py-12 bg-[#F1DEBB] rounded-lg xl:mx-auto">
+    <section className="mx-4 px-4 py-12 bg-[#F1DEBB] rounded-lg">
       {/* Title - Always at the top on mobile */}
       <h2 className="text-3xl font-bold text-center mb-6 md:hidden">Have Questions?</h2>
       {/* <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Have Questions?</h1> */}
@@ -89,21 +89,25 @@ const FAQSection = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="mt-4 bg-white rounded-lg shadow-md overflow-hidden"
+                className="mt-4 bg-[#FFFAF5] rounded-lg shadow-md overflow-hidden"
               >
                 <button
                   className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <span className="font-semibold text-gray-800">{faq.question}</span>
+                  <span className="font-semibold text-gray-800 ">{faq.question}</span>
                   {openIndex === index ? (
+                    <div className="p-1 rounded-full bg-[#F1DEBB]">
                     <Minus className="text-gray-600 text-xl" />
+                    </div>
                   ) : (
+                    <div className="p-1 rounded-full bg-[#F1DEBB]">
                     <Plus className="text-gray-600 text-xl" />
+                    </div>
                   )}
                 </button>
                 {openIndex === index && (
-                  <div className="px-6 py-4 bg-gray-50">
+                  <div className="px-6 pb-4 bg-[#FFFAF5]">
                     <p className="text-gray-600">{faq.answer}</p>
                   </div>
                 )}

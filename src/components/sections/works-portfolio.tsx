@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 export function WorksPortfolioSection() {
   return (
@@ -8,7 +9,9 @@ export function WorksPortfolioSection() {
         <div className="text-center max-w-3xl mx-auto space-y-4">
       <div className="inline-flex items-center gap-2">
         <div className="w-6 h-6 bg-orange-500/10 rounded flex items-center justify-center">
-          <span className="text-orange-500 text-2xl">★</span>
+          <span className="text-orange-500 text-2xl">
+            <Image alt="feature" width={28} height={28} src={'/feature-icon.svg'} className="mr-2" />
+          </span>
         </div>
         <span className="text-[#7553F5] text-2xl font-medium font-polysans">FEATURES PROJECT</span>
       </div>

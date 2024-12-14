@@ -1,4 +1,3 @@
-import { Footer } from "@/components/layout/footer";
 import { HeroSection } from "@/components/sections/hero";
 import { TrustedBySection } from "@/components/sections/trusted-by";
 import { ServicesSection } from "@/components/sections/services";
@@ -12,18 +11,22 @@ import NavBar from "@/components/layout/navigation/NavBar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#FFFAF5]">
-      <NavBar />
-      <HeroSection />
+        
+    <section >
+      <div style={{ backgroundImage: "url('/hero-bg.svg')", backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center top" }}>
+        <NavBar />
+        <HeroSection />
+      </div>
       <TrustedBySection />
       <DemoSection />
       <ServicesSection />
       <BrandingSection />
       <WorksPortfolioSection />
       <InformationSection />
-      <WorkProcessSection />
-      <FAQSection />
-      <Footer />
-    </main>
+      <div style={{ backgroundImage: "url('/pattern-bg.svg')", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center top" }}>
+        <WorkProcessSection />
+        <FAQSection />
+      </div>
+    </section>
   );
 }
