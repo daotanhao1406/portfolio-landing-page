@@ -64,7 +64,7 @@ export function NavMenu({ items }: NavMenuProps) {
                             className={`flex items-center pt-2 ${pathname === subItem.path && "text-primary"} hover:text-primary rounded-md transition-colors fill-white`}
                           >
                             <div className={`w-8 h-8 p-1 mr-2 flex items-center justify-center ${pathname === subItem.path ? "bg-primary" : 'bg-white'} rounded-full`}>
-                            <Image src={'/branding-icon.svg'} width={14} height={14} alt="whatsapp" className={`${pathname === subItem.path ? "text-white" : 'text-black'}`} />
+                            <Image src={subItem.icon as string} width={14} height={14} alt="whatsapp" className={`${pathname === subItem.path ? "text-white" : 'text-black'}`} />
                           </div>  
                            {subItem.title}
                           </Link>

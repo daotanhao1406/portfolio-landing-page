@@ -4,7 +4,7 @@ import { LucideIcon } from "lucide-react";
 export interface MenuItem {
   title: string;
   path: string;
-  icon?: LucideIcon
+  icon?: string
   submenu?: MenuItem[];
 }
 
@@ -18,10 +18,10 @@ export const menuItems: MenuItem[] = [
     title: "Works",
     path: "/works",
     submenu: [
-      { title: "Branding Design", path: "/works", icon: Video },
-      { title: "Graphic Design", path: "#", icon: Video },
-      { title: "Video Editing", path: "#", icon: Video },
-      { title: "Animation & Motion Graphic", path: "#", icon: Video },
+      { title: "Branding Design", path: "/works", icon: '/branding-icon.svg' },
+      { title: "Graphic Design", path: "#", icon: '/design-icon.svg' },
+      { title: "Video Editing", path: "#", icon: '/video-icon.svg' },
+      { title: "Animation & Motion Graphic", path: "#", icon: '/animation-icon.svg' },
     ],
   },
   { title: "Service", path: "#" },
