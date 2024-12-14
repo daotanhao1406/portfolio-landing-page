@@ -1,4 +1,4 @@
-import { MessageCircle, Linkedin, Mail, Github, Twitter, Facebook, Instagram, Video } from "lucide-react";
+import { MessageCircle, Linkedin, Mail, Github, Twitter, Facebook, Instagram } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 export interface MenuItem {
