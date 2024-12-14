@@ -15,24 +15,19 @@ export interface SocialLink {
 export const menuItems: MenuItem[] = [
   { title: "Home", path: "/" },
   {
-    title: "Service",
-    path: "#",
+    title: "Works",
+    path: "/works",
     submenu: [
-      { title: "Branding Design", path: "/services/branding", icon: Video },
-      { title: "Graphic Design", path: "/services/graphic", icon: Video },
-      { title: "Video Editing", path: "/services/video", icon: Video },
-      { title: "Animation & Motion Graphic", path: "/services/animation", icon: Video },
+      { title: "Branding Design", path: "/works", icon: Video },
+      { title: "Graphic Design", path: "#", icon: Video },
+      { title: "Video Editing", path: "#", icon: Video },
+      { title: "Animation & Motion Graphic", path: "#", icon: Video },
     ],
   },
-  { title: "Works", path: "/works", submenu: [
-    { title: "Branding Design", path: "/services/branding", icon: Video },
-    { title: "Graphic Design", path: "/services/graphic", icon: Video },
-    { title: "Video Editing", path: "/services/video", icon: Video },
-    { title: "Animation & Motion Graphic", path: "/services/animation", icon: Video },
-  ], },
-  { title: "About", path: "/about" },
-  { title: "Blog", path: "/blog" },
-  { title: "FAQ", path: "/faq" },
+  { title: "Service", path: "#" },
+  { title: "About", path: "#" },
+  { title: "Blog", path: "#" },
+  { title: "FAQ", path: "#" },
 ];
 
 export const socialLinks: SocialLink[] = [
