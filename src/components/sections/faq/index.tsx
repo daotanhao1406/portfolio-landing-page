@@ -89,7 +89,7 @@ const FAQSection = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="mt-4 bg-[#FFFAF5] rounded-lg shadow-md overflow-hidden"
+                className="mt-1 bg-[#FFFAF5] rounded-md shadow-md overflow-hidden"
               >
                 <button
                   className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300"
