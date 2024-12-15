@@ -1,6 +1,7 @@
 "use client";
 import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -21,9 +22,12 @@ export function ServiceCard({ icon, title, subTitle }: ServiceCardProps) {
       
         { isHovered && <div className="mt-4 space-y-1">
         {subTitle?.map((item, index) => (
-          <ul key={index} className="text-white flex items-center">
+          <motion.ul initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.1 }} key={index} className="text-white flex items-center">
             <ArrowUpRight className="w-4 h-4 mr-1 text-white" /> {item}
-          </ul>
+          </motion.ul>
         ))}
         </div>}
         {isHovered === false && <h3 className="text-white mt-20 text-xl font-normal">
