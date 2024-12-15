@@ -7,7 +7,7 @@ export function Footer() {
     <footer>
       <SocialMediaSection />
       <div className="xl:px-12 px-4 mx-4 md:my-10 mt-10 flex flex-col justify-between">
-        <span className="hidden sm:text-[#32C369] sm:flex items-center justify-end sm:text-base text-xs">{`Let's Chat`}
+        <span className="hidden cursor-pointer sm:text-[#32C369] sm:flex items-center justify-end sm:text-base text-xs">{`Let's Chat`}
         <div className="w-8 h-8 rounded-3xl bg-[#32C369] ml-2 flex justify-center items-center">
         <Image src={'/whatsapp-white-chat.svg'} width={20} height={20} alt="whatsapp" />
         </div>
@@ -18,7 +18,7 @@ export function Footer() {
         <p className="font-medium text-sm lg:text-lg">Privacy Policy</p>
         <p className="font-medium text-sm lg:text-lg">Terms & Conditions</p>
       </div>
-      <span className="flex mt-6 sm:text-[#32C369] sm:hidden items-center justify-end sm:mt-0 sm:text-base text-xs">{`Let's Chat`}
+      <span className="cursor-pointer flex mt-6 sm:text-[#32C369] sm:hidden items-center justify-end sm:mt-0 sm:text-base text-xs">{`Let's Chat`}
         <div className="w-8 h-8 rounded-3xl bg-[#32C369] ml-2 flex justify-center items-center">
           <Image src={'/whatsapp-white-chat.svg'} width={20} height={20} alt="whatsapp" />
         </div>
