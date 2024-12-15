@@ -6,7 +6,7 @@ export function ServiceGrid() {
     <motion.div initial={{ opacity: 0, x: -20 }}
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true }}
-    transition={{ delay: 0.5 }} className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    transition={{ delay: 0.5 }} className="grid grid-cols-1 lg:grid-cols-2 gap-4 xl:mt-20 lg:mt-10">
         <ServiceCard
           icon={<Image alt="branding" width={24} height={24} src={'/branding-icon.svg'} className="w-6 h-6 text-[#242034]" />}
           title="Branding Design"

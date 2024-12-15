@@ -25,7 +25,7 @@ export function ServicesSection() {
       </motion.div>
         <div className="hidden lg:grid grid-cols-2 gap-16 mt-3">
           <div className="flex flex-col justify-between">
-          <h2 className="text-2xl md:text-5xl font-bold mb-5">My Capabilities</h2>
+          <h2 className="text-2xl md:text-5xl font-bold">My Capabilities</h2>
           <ServiceGrid />
           </div>
           <ProfileCard />
