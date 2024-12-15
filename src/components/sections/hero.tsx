@@ -1,8 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import AnimatedCurve from "../AnimatedCurve";
 
 export function HeroSection() {
   return (
@@ -17,9 +17,7 @@ export function HeroSection() {
                 <div className="flex flex-col mr-2">
                 <span style={{backgroundSize: "200% 100%", backgroundPosition: "20% center"}} className="lg:h-20 md:h-[52px] bg-clip-text text-transparent bg-gradient-to-r from-[#8362FF] to-[#FFAD80]">Design
                 </span>
-                <Image src={'/design-bottom.svg'} className="lg:flex hidden" width={259} height={23} alt="design icon" />
-                <Image src={'/design-bottom.svg'} className="md:flex lg:hidden hidden" width={150} height={12} alt="design icon" />
-                <Image src={'/design-bottom.svg'} className="sm:hidden flex" width={100} height={12} alt="design icon" />
+                <AnimatedCurve />
                 </div>
             {' '}Solutions.
             </div>

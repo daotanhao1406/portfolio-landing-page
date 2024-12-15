@@ -66,3 +66,145 @@ body {
   font-weight: 500;
   font-style: italic;
 }
+
+/* .curve-container {
+  width: 100%;
+  max-width: 259px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.curved-line {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: drawLine 1.5s ease-in forwards;
+}
+
+.star-wrapper {
+  opacity: 0;
+  transform: translate(251px, 17px);
+  animation: moveAlongPath 2s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+.star {
+  transform: scale(0.8) translate(-7px, -17px);
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes moveAlongPath {
+  0% {
+    opacity: 1;
+    transform: translate(251px, 17px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(7px, 17px);
+  }
+} */
+
+
+/* .curve-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.curve-svg {
+  width: 259px;
+  height: 23px;
+}
+
+.curved-line {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: drawLine 1.5s ease-in forwards;
+}
+
+.star-wrapper {
+  opacity: 0;
+  transform: translate(251px, 17px);
+  animation: moveAlongPath 2s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+.star {
+  transform: scale(0.8) translate(-7px, -17px);
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes moveAlongPath {
+  0% {
+    opacity: 1;
+    transform: translate(251px, 17px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(7px, 17px);
+  }
+}
+
+@media (max-width: 768px) {
+  .curve-svg {
+    width: 150px;
+    height: 12px;
+  }
+
+  .star {
+    transform: scale(0.4) translate(-7px, -17px);
+  }
+
+  .star-wrapper {
+    transform: translate(142px, 8px);
+    animation-name: moveAlongPathTablet;
+  }
+
+  @keyframes moveAlongPathTablet {
+    0% {
+      opacity: 1;
+      transform: translate(142px, 8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(7px, 8px);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .curve-svg {
+    width: 100px;
+    height: 12px;
+  }
+
+  .star-wrapper {
+    transform: translate(92px, 8px);
+    animation-name: moveAlongPathMobile;
+  }
+
+  @keyframes moveAlongPathMobile {
+    0% {
+      opacity: 1;
+      transform: translate(92px, 8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(7px, 8px);
+    }
+  }
+} */
+
+
+
