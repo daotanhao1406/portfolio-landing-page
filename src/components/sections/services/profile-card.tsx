@@ -2,13 +2,17 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export function ProfileCard() {
   return (
     <div className="rounded-3xl h-full">
-      <p className="text-gray-600 mb-8 font-medium">
+      <motion.p initial={{ opacity: 0, x: 20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.5 }} className="text-gray-600 mb-8 font-medium">
       {`Hello! I'm David,`} <span className="font-light">a dedicated creative professional with expertise in Branding Design, Graphic Design, Animation, and Video Editing. With a strong focus on helping brands stand out, my team and I bring a unique combination of skills to create visually compelling and strategic solutions.</span>
-      </p>
+      </motion.p>
       <div className="relative">
         
         <Image

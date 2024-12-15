@@ -2,6 +2,7 @@
 import { Minus, Plus } from "lucide-react";
 import React, { useState } from "react";
 import MoreQuestionCard from "./more-question-card";
+import { motion } from "framer-motion";
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -34,52 +35,13 @@ const FAQSection = () => {
   };
 
   return (
-    // <section className="mx-4 px-4 py-12 bg-[#F1DEBB] rounded-lg">
-    //   <h2 className="text-2xl font-bold md:hidden">Have <br /> Questions?</h2>
-
-    //   <div className="flex flex-col md:grid md:grid-cols-2 gap-8">
-    //   <div className="order-2 md:order-1">
-    //   <h2 className="hidden md:flex text-5xl font-bold mb-4">Have <br /> Questions?</h2>
-    //       <MoreQuestionCard />
-    //     </div>
-    //   <div className="space-y-1 md:order-2">
-    //     {faqs.map((faq, index) => (
-    //       <div
-    //         key={index}
-    //         className="border border-gray-200 rounded-lg overflow-hidden"
-    //       >
-    //         <button
-    //           className="text-left w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors duration-200"
-    //           onClick={() => toggleFAQ(index)}
-    //           aria-expanded={openIndex === index}
-    //         >
-    //           <span className="text-lg font-bold text-gray-900">{faq.question}</span>
-    //             {openIndex === index ? (
-    //               <Minus className="h-6 w-6 text-indigo-500" />
-    //             ) : (
-    //               <Plus className="h-6 w-6 text-indigo-500" />
-    //             )}
-    //         </button>
-
-    //         <div
-    //           className={`transition-all duration-200 ease-in-out ${
-    //             openIndex === index
-    //               ? "max-h-96 opacity-100"
-    //               : "max-h-0 opacity-0"
-    //           }`}
-    //         >
-    //           <div className="p-5 border-t border-gray-200 bg-gray-50">
-    //             <p className="text-gray-600">{faq.answer}</p>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     ))}
-    //   </div>
-    //   </div>
-    // </section>
     <section className="mx-4 px-4 py-12 bg-[#F1DEBB] rounded-lg">
       {/* Title - Always at the top on mobile */}
-      <h2 className="text-3xl font-bold text-center mb-6 md:hidden">Have Questions?</h2>
+      <div className="2xl:max-w-7xl 2xl:mx-auto">
+      <motion.h2 initial={{ opacity: 0, x: -20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.2 }} className="text-3xl font-bold text-center mb-6 md:hidden">Have Questions?</motion.h2>
       {/* <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Have Questions?</h1> */}
       
       <div className="flex flex-col md:flex-row gap-8">
@@ -87,8 +49,12 @@ const FAQSection = () => {
         <div className="w-full lg:w-2/3 order-1 md:order-2">
           <div className="max-w-3xl mx-auto">
             {faqs.map((faq, index) => (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
                 className="mt-1 bg-[#FFFAF5] rounded-md shadow-md overflow-hidden"
               >
                 <button
@@ -111,35 +77,27 @@ const FAQSection = () => {
                     <p className="text-gray-600">{faq.answer}</p>
                   </div>
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
         {/* Contact Card - Last on mobile, left on desktop */}
         <div className="w-full lg:w-1/3 flex flex-col justify-between items-center order-2 md:order-1">
-          {/* <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
-            <div className="flex flex-col gap-4">
-              <a
-                href="https://wa.me/1234567890"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600 transition-colors duration-300"
-              >
-                <span>Chat on WhatsApp</span>
-              </a>
-              
-              <a
-                href="mailto:support@example.com"
-                className="flex items-center justify-center gap-2 bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors duration-300"
-              >
-                <span>Send us an Email</span>
-              </a>
-            </div>
-          </div> */}
-          <h2 className="hidden md:flex text-5xl font-bold mb-4">Have <br /> Questions?</h2>
+          <motion.h2 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}  
+            className="hidden md:flex text-5xl font-bold mb-4">Have <br /> Questions?</motion.h2>
+          <motion.div initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}>
           <MoreQuestionCard />
+          </motion.div>
         </div>
+      </div>
       </div>
     </section>
   );

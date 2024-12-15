@@ -2,7 +2,6 @@ import Image from "next/image";
 
 export default function MoreQuestionCard() {
     return (
-        <div>
           <div className="flex rounded-xl gap-4 w-full max-w-2xl" style={{ backgroundImage: "url('/questions-bg.svg')", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
             <div  className=" flex flex-col text-center py-12 sm:px-6 px-12">
                 <p className="text-base font-medium">Do you have more Questions?</p>
@@ -17,6 +16,5 @@ export default function MoreQuestionCard() {
                 </div>
                 </div>
           </div>
-        </div>
     )
 }

@@ -1,6 +1,8 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { motion } from 'framer-motion';
 const processData = [
     {
       icon: '/magnify-icon.svg',
@@ -41,7 +43,10 @@ export default function NewWorkProcessSection() {
     <div className="md:px-4 relative">
       {/* Phần Tiêu Đề */}
       <div className="text-left mb-12 space-y-4">
-        <div className="inline-flex items-center gap-2">
+        <motion.div  initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }} className="inline-flex items-center gap-2">
           <span className="text-orange-500 text-2xl">
             <Image
               alt="process"
@@ -54,10 +59,13 @@ export default function NewWorkProcessSection() {
           <span className="text-[#613AF7] text-2xl font-medium font-polysans">
             WORK PROCESS
           </span>
-        </div>
+        </motion.div>
 
         {/* Tiêu đề và Nút Carousel */}
-        <div className="flex justify-between items-center md:relative">
+        <motion.div initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5 }} className="flex justify-between items-center md:relative">
           <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold max-w-lg lg:max-w-4xl">
             {`Here's a streamlined work process for your projects:`}
           </h2>
@@ -66,7 +74,7 @@ export default function NewWorkProcessSection() {
             <CarouselPrevious className="text-primary  w-10 h-10" />
             <CarouselNext className="text-primary w-10 h-10" />
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Carousel Content */}

@@ -1,6 +1,54 @@
+'use client'
 import ColumnCard from "./column-card";
 import RowCard from "./row-card";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const columnInformations = [
+  {
+    title: "Complete Creative Solutions",
+    description: "We create visuals that captivate and convert, enhancing audience engagement and driving growth for your business."
+  },
+  {
+    title: "Fast Delivery",
+    description: "Your time matters. My team and I ensure a quick turnaround, so your projects reach your audience without delay."
+  },
+  {
+    title: "Brand Driven Works",
+    description: "Every works is crafted to meet your brand’s unique personality, creating a visual identity that stands out on any platform."
+  },
+  {
+    title: "Engaging Video Content",
+    description: "From short content video to full-length videos, our expert editing enhances your message and keeps your audience hooked."
+  },
+  {
+    title: "Animation That Inspires",
+    description: "Transform your ideas into dynamic animations that captivate and engage viewers, making complex concepts easy to understand."
+  },
+  {
+    title: "Custom Brand Solutions",
+    description: "From logo creation to full brand identity design, we ensure your brand stands out with a unique and professional touch."
+  },
+]
+
+const rowInformations = [
+  {
+    title: "Boosted Engagement",
+    description: "We create visuals that captivate and convert, enhancing audience engagement and driving growth for your business."
+  },
+  {
+    title: "High Conversion Rates",
+    description: "Through targeted creation strategies, we focus on turning browsers into buyers, increasing your brand’s conversion rates effectively."
+  },
+  {
+    title: "Consistent Visual Identity",
+    description: "We ensure that every design, from logos to social media assets, aligns seamlessly with your brand for a polished, professional look"
+  },
+  {
+    title: "End to End Creative Support",
+    description: "We don’t just deliver projects; we partner with you every step of the way to ensure each piece aligns with your vision and goals."
+  },
+]
 
 export function InformationSection() {
   return (
@@ -20,7 +68,11 @@ export function InformationSection() {
      <div className="w-full mx-auto max-w-7xl px-4 space-y-4 mt-12">
      <div className="text-center w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-          <div style={{ backgroundImage: "url('/information-bg.svg')", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center top" }} className="w-full h-auto flex p-12 bg-[#F1DEBB] rounded-lg">
+          <motion.div initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+             style={{ backgroundImage: "url('/information-bg.svg')", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center top" }} className="w-full h-auto flex p-12 bg-[#F1DEBB] rounded-lg">
             <div className="text-center flex flex-col justify-center items-center space-y-8 mx-auto">
             <h2 className="text-2xl md:text-4xl font-bold">{`We're more than`} <br /> Designers</h2>
             <p className="font-medium text-xs max-w-sm md:text-sm">
@@ -34,9 +86,11 @@ export function InformationSection() {
             </div>
           </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="text-center w-full grid grid-cols-2 sm:grid-cols-2 gap-4 ">
+        <motion.div initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }} transition={{ delay: 0.4 }} className="text-center w-full grid grid-cols-2 sm:grid-cols-2 gap-4 ">
           <div style={{ backgroundImage: "url('/information-bg.svg')", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center top" }} className="bg-[#F1DEBB] p-4 sm:flex flex-col justify-center rounded-lg h-full space-y-2">
             <h3 className="text-[#FF7B32] text-4xl md:text-5xl lg:text-6xl font-bold">4+</h3>
             <p className='lg:text-lg md:font-medium text-sm'>Years of Experience</p>
@@ -53,29 +107,62 @@ export function InformationSection() {
             <h3 className="text-[#FF7B32] text-4xl md:text-5xl lg:text-6xl font-bold">8</h3>
             <p className='lg:text-lg md:font-medium text-sm'>Team Members</p>
           </div>
-        </div>
+        </motion.div>
       </div>
 
 
 
 
-      <div className="text-center grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <ColumnCard title="Complete Creative Solutions" description="With expertise in Branding, Graphic Design, Animation, and Video Editing, I offer an all in one creative service to elevate your brand effortlessly." />
-        <ColumnCard title="Fast Delivery" description="Your time matters. My team and I ensure a quick turnaround, so your projects reach your audience without delay." />
-        <ColumnCard title="Brand Driven Works" description="Every works is crafted to meet your brand’s unique personality, creating a visual identity that stands out on any platform." />
-      </div>
+      <motion.div initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}  className="text-center grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {
+          columnInformations.slice(0, 3).map((info, index) => (
+           
+            <ColumnCard key={index} title={info.title} description={info.description} />
+          ))
+        }
+      </motion.div>
       <div className="text-center w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <RowCard title="Boosted Engagement"  description="We create visuals that captivate and convert, enhancing audience engagement and driving growth for your business." />
-        <RowCard title="High Conversion Rates"  description="Through targeted creation strategies, we focus on turning browsers into buyers, increasing your brand’s conversion rates effectively." />
+      {
+          rowInformations.slice(0, 2).map((info, index) => (
+            <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+          >
+            <RowCard key={index} title={info.title} description={info.description} />
+          </motion.div>
+          ))
+        }
       </div>
-      <div className="text-center grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <ColumnCard title="Engaging Video Content" description="From short content video to full-length videos, our expert editing enhances your message and keeps your audience hooked." />
-        <ColumnCard title="Animation That Inspires" description="Transform your ideas into dynamic animations that captivate and engage viewers, making complex concepts easy to understand." />
-        <ColumnCard title="Custom Brand Solutions" description="From logo creation to full brand identity design, we ensure your brand stands out with a unique and professional touch." />
-      </div>
+      <motion.div initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }} className="text-center grid grid-cols-1 sm:grid-cols-3 gap-4">
+      {
+          columnInformations.slice(3).map((info, index) => (
+            <ColumnCard key={index} title={info.title} description={info.description} />
+          ))
+        }
+      </motion.div>
       <div className="text-center w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <RowCard title="Consistent Visual Identity"  description="We ensure that every design, from logos to social media assets, aligns seamlessly with your brand for a polished, professional look"  />
-        <RowCard title="End to End Creative Support"  description="We don’t just deliver projects; we partner with you every step of the way to ensure each piece aligns with your vision and goals." />
+      {
+           rowInformations.slice(0, 2).map((info, index) => (
+            <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+          >
+            <RowCard key={index} title={info.title} description={info.description} />
+          </motion.div>
+          ))
+        }
       </div>
      </div>
       </div>

@@ -119,7 +119,7 @@ export default function WorkProcessSection() {
         ))} */}
 
 {processData.map((process, index) => (
-  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+  <CarouselItem tabIndex={index} key={index} className="md:basis-1/2 lg:basis-1/3">
             <div key={index} className={`flex flex-col ${process.bgColor} p-6 rounded-lg border`}>
               <Image alt={process.icon} width={48} height={48} className='mb-6' src={process.icon} />
               {/* <p className="flex-1 text-base mb-4">{process.icon}</p> */}
