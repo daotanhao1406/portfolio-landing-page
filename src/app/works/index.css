@@ -1,12 +1,12 @@
-  .ant-popover {
-    --antd-arrow-background-color: #F1DEBB !important;
-  }
+.ant-popover {
+  --antd-arrow-background-color: #f1debb !important;
+}
 
-  .ant-popover-content .ant-popover-inner {
-    background-color: #F1DEBB !important;
-  }
+.ant-popover-content .ant-popover-inner {
+  background-color: #f1debb !important;
+}
 
-  .ant-popover-content {
-    margin-right: 16px !important;
-    margin-left: 16px !important;
-  }
+.ant-popover-content {
+  margin-right: 16px !important;
+  margin-left: 16px !important;
+}
