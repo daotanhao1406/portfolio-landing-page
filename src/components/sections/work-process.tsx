@@ -35,7 +35,7 @@ const processData = [
     bgColor: 'bg-[#FFE1B6]',
   },
 ]
-export default function NewWorkProcessSection() {
+export default function WorkProcessSection() {
   return (
     <section className='max-w-7xl mx-4 py-16 md:py-24 lg:mx-auto'>
       <Carousel opts={{ align: 'start' }} className='w-full'>

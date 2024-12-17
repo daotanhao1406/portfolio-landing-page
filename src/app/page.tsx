@@ -7,7 +7,7 @@ import { InformationSection } from '@/components/sections/information/informatio
 import FAQSection from '@/components/sections/faq'
 import DemoSection from '@/components/sections/demo'
 import NavBar from '@/components/layout/navigation/NavBar'
-import NewWorkProcessSection from '@/components/sections/work-process/new-process'
+import WorkProcessSection from '@/components/sections/work-process'
 
 export default function Home() {
   return (
@@ -23,8 +23,7 @@ export default function Home() {
       <WorksPortfolioSection />
       <InformationSection />
       <div className='bg-pattern-section bg-cover bg-no-repeat bg-top'>
-        {/* <WorkProcessSection /> */}
-        <NewWorkProcessSection />
+        <WorkProcessSection />
         <FAQSection />
       </div>
     </section>

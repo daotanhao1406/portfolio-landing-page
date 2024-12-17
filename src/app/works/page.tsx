@@ -65,7 +65,7 @@ export default function Works() {
                   </div>
                 </>
               }
-              trigger='hover'
+              trigger={['hover', 'click']}
               placement='bottom'
             >
               <button className='px-6 py-2 border-[#F4F4F4] rounded-full md:text-base text-sm font-medium bg-[#F4F4F4] text-[#312D42] hover:bg-white hover:text-primary border-2 hover:border-[#F1DEBB]'>{item.label}</button>

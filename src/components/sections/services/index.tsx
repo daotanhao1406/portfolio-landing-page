@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 
 export function ServicesSection() {
   return (
-    <section className='py-20 px-4 md:px-8'>
+    <section className='lg:py-20 py-8 px-4 md:px-8'>
       <div className='max-w-7xl mx-auto'>
         {/* Desktop Layout */}
         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className='hidden lg:inline-flex items-center gap-2'>
